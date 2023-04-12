@@ -44,7 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="dataLabel" destination="NfW-vT-aiP" id="YPJ-fY-YKR"/>
-                        <outlet property="dataPicker" destination="zwS-NG-pP5" id="DMk-aW-nCz"/>
+                        <outlet property="datePicker" destination="zwS-NG-pP5" id="DMk-aW-nCz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,24 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var dataPicker: UIDatePicker! {
-        didSet {
-            dataPicker.locale = Locale(identifier: "ru_RU")
-        }
-    }
+    @IBOutlet var datePicker: UIDatePicker!
     
     @IBOutlet var dataLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        dataLabel.text = getDate()
     }
 
     @IBAction func changeDate(_ sender: UIDatePicker) {
+        dataLabel.text = getDate()
+    }
+    
+    private func getDate() -> String {
         let dateFormater = DateFormatter()
         dateFormater.dateStyle = .full
-        let dateValue = dateFormater.string(from: sender.date)
-        dataLabel.text = dateValue
+        dateFormater.locale = Locale(identifier: "ru_RU")
+        let dateValue = dateFormater.string(from: datePicker.date)
+        return dateValue
     }
 
 }
